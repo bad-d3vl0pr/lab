@@ -1,0 +1,14 @@
+version: '3'
+services:
+  ubuntu_3:
+      container_name: ubuntu_3
+      image: ubuntu
+      restart: on-failure
+      command: ["sleep","infinity"]
+      networks:
+        - ubuntu_network
+
+networks:
+  ubuntu_network:
+    external: true
+
